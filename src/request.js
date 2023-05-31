@@ -7,15 +7,11 @@ const options = {
   },
 };
 
-const discoverMovies = () => {
+const discoverMovies = () =>
   fetch(
     "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc",
     options
-  )
-    .then((response) => response.json())
-    .then((response) => console.log(response))
-    .catch((err) => console.error(err));
-};
+  );
 
 const popularMovies = () => {
   fetch(
@@ -47,23 +43,9 @@ const commingSoon = () => {
     .catch((err) => console.error(err));
 };
 
-const details = () => {
-  fetch("https://api.themoviedb.org/3/movie/movie_id?language=en-US", options)
-    .then((response) => response.json())
-    .then((response) => console.log(response))
-    .catch((err) => console.error(err));
-};
-
-const images = () => {
-  fetch("https://api.themoviedb.org/3/movie/movie_id/images", options)
-    .then((response) => response.json())
-    .then((response) => console.log(response))
-    .catch((err) => console.error(err));
-};
-
-const search = () => {
+const details = (movie_id) => {
   fetch(
-    "https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1",
+    `https://api.themoviedb.org/3/movie/${movie_id}?language=en-US`,
     options
   )
     .then((response) => response.json())
@@ -71,4 +53,29 @@ const search = () => {
     .catch((err) => console.error(err));
 };
 
-export  {discoverMovies, popularMovies, rating, commingSoon, details, images, search}
+const images = (movie_id) => {
+  fetch(`https://api.themoviedb.org/3/movie/${movie_id}/images`, options)
+    .then((response) => response.json())
+    .then((response) => console.log(response))
+    .catch((err) => console.error(err));
+};
+
+const search = (keyword) => {
+  fetch(
+    `https://api.themoviedb.org/3/search/movie?query=${keyword}include_adult=false&language=en-US&page=1`,
+    options
+  )
+    .then((response) => response.json())
+    .then((response) => console.log(response))
+    .catch((err) => console.error(err));
+};
+
+export {
+  discoverMovies,
+  popularMovies,
+  rating,
+  commingSoon,
+  details,
+  images,
+  search,
+};
