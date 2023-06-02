@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { discoverMovies, rating, commingSoon } from "./request";
+import Header from "./components/header/Header.jsx";
 
 function App() {
   const [discoverList, setDiscoverList] = useState([]);
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <>
+    <Header></Header>
       <h2>Discover movies</h2>
       {discoverList.map((movie) => (
         <div key={movie.id}>
