@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { discoverMovies, rating, commingSoon } from "./request";
+import Banner from "./components/Banner";
 
 function App() {
   const [discoverList, setDiscoverList] = useState([]);
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <>
+      <Banner />
       <h2>Discover movies</h2>
       {discoverList.map((movie) => (
         <div key={movie.id}>

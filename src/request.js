@@ -37,13 +37,13 @@ const commingSoon = (setMovies) => {
     .catch((err) => console.error(err));
 };
 
-const details = (movie_id) => {
+const details = (movie_id, setMovie) => {
   fetch(
     `https://api.themoviedb.org/3/movie/${movie_id}?language=en-US`,
     options
   )
     .then((response) => response.json())
-    .then((response) => console.log(response))
+    .then((response) => setMovie(response))
     .catch((err) => console.error(err));
 };
 
