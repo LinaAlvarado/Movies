@@ -9,7 +9,7 @@ const Carousel = ({ children }) => {
     slidesToShow: 6,
     slidesToScroll: 6,
     autoplay: true,
-    autoplaySpeed: 500,
+    /*autoplaySpeed: 500,*/
   };
 
   return <Slider {...settings}>{children}</Slider>;

@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { discoverMovies, rating, commingSoon } from "./request";
 import Header from "./components/header/Header.jsx";
 import Banner from "./components/Banner";
-import MovieCard from "./components/MovieCard";
+import MovieCard from "./components/movieCard/MovieCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Carousel from "./components/Carousel";
-
+import "./global.css";
 function App() {
   const [discoverList, setDiscoverList] = useState([]);
   const [ratingList, setRatingList] = useState([]);
@@ -30,15 +30,20 @@ function App() {
       </Carousel>
 
       <h2>Rating</h2>
-      {ratingList.map((movie) => (
-        <MovieCard key={movie.id} movie={movie} />
-      ))}
-      <h2>Comming soon</h2>
-      {commingList.map((movie) => (
-        <div key={movie.id}>
+      <Carousel>
+        {ratingList.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
-        </div>
-      ))}
+        ))}
+      </Carousel>
+
+      <h2>Comming soon</h2>
+      <Carousel>
+        {commingList.map((movie) => (
+          <div key={movie.id}>
+            <MovieCard key={movie.id} movie={movie} />
+          </div>
+        ))}
+      </Carousel>
     </>
   );
 }
