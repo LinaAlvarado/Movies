@@ -3,6 +3,9 @@ import { discoverMovies, rating, commingSoon } from "./request";
 import Header from "./components/header/Header.jsx";
 import Banner from "./components/Banner";
 import MovieCard from "./components/MovieCard";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Carousel from "./components/Carousel";
 
 function App() {
   const [discoverList, setDiscoverList] = useState([]);
@@ -20,9 +23,12 @@ function App() {
       <Header></Header>
       <Banner />
       <h2>Discover movies</h2>
-      {discoverList.map((movie) => (
-        <MovieCard key={movie.id} movie={movie} />
-      ))}
+      <Carousel>
+        {discoverList.map((movie) => (
+          <MovieCard key={movie.id} movie={movie} />
+        ))}
+      </Carousel>
+
       <h2>Rating</h2>
       {ratingList.map((movie) => (
         <MovieCard key={movie.id} movie={movie} />
