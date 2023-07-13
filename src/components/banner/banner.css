@@ -31,7 +31,7 @@
   gap: 0.5rem;
 }
 
-button {
+.button-play {
   width: 16rem;
   border:none;
   height: 2.75rem;
@@ -44,7 +44,7 @@ button {
   font-weight: 500;
 }
 
-button:hover{
+.button-play:hover{
   transition: all 0.2s ease;
   width: 16.1rem;
   height: 2.8rem;

@@ -24,7 +24,7 @@ const Banner = () => {
           </div>
           <p>{bannerMovie?.runtime} min</p>
         </div>
-        <button>See details</button>
+        <button className="button-play">See details</button>
       </div>
     </section>
   );
