@@ -22,21 +22,26 @@ function App() {
     <>
       <Header></Header>
       <Banner />
-      <h2>Discover movies</h2>
-      <Carousel>
-        {discoverList.map((movie) => (
-          <MovieCard key={movie.id} movie={movie} />
-        ))}
-      </Carousel>
+      <section className="container-section">
+        <h2>Discover movies</h2>
+        <Carousel>
+          {discoverList.map((movie) => (
+            <MovieCard key={movie.id} movie={movie} />
+          ))}
+        </Carousel>
+      </section>
 
-      <h2>Rating</h2>
-      <Carousel>
-        {ratingList.map((movie) => (
-          <MovieCard key={movie.id} movie={movie} />
-        ))}
-      </Carousel>
+      <section className="container-section">
+        <h2>Rating</h2>
+        <Carousel>
+          {ratingList.map((movie) => (
+            <MovieCard key={movie.id} movie={movie} />
+          ))}
+        </Carousel>
+      </section>
 
-      <h2>Comming soon</h2>
+     <section className="container-section">
+     <h2>Comming soon</h2>
       <Carousel>
         {commingList.map((movie) => (
           <div key={movie.id}>
@@ -44,6 +49,8 @@ function App() {
           </div>
         ))}
       </Carousel>
+     </section>
+
     </>
   );
 }

@@ -1,7 +1,6 @@
 .card-container {
   position: relative;
   width: 11rem;
-
 }
 
 .container-image {
@@ -53,4 +52,11 @@
 
 .card-vote {
   font-size: 0.8rem;
+}
+
+/* prueba */
+@media (min-width: 320px) {
+  .card-container {
+    width: 8rem;
+  }
 }

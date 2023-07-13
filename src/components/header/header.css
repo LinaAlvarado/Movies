@@ -3,6 +3,7 @@
   --accent-red: #d94d50;
   --accent-pink: #b73ae1;
   --primary-color: #1E1E1E;
+  --primary-color-dark: #0e0e0e;
 }
 
 h1 {
@@ -24,7 +25,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 23rem;
+    width: 19rem;
 }
 .input-search{
     background-color: var(--primary-color);
@@ -32,17 +33,26 @@ header{
     border: solid 0.5px #e084ff9f ;
     /* border-image: linear-gradient(0deg, var(--accent-pink), var(--primary-color)) 1; */
     height: 35px;
+    width: 80%;
     padding: 10px;
     
+}
+
+.input-search:hover{
+  background-color: var(--primary-color-dark);
 }
 
 .button-search{
     border-radius: 8px;
     border: solid 0.5px #e084ff9f ;
     background-color: var(--primary-color);
-    width: 40px;
+    width: 15%;
     height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.button-search:hover{
+  background-color: var(--primary-color-dark);
 }
