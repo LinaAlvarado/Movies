@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { discoverMovies, rating, commingSoon } from "./request";
 import Header from "./components/header/Header.jsx";
-import Banner from "./components/Banner";
+import Banner from "./components/banner/Banner.jsx";
 import MovieCard from "./components/movieCard/MovieCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
