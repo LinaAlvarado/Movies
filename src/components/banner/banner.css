@@ -1,0 +1,51 @@
+.container-banner {
+  width: 100%;
+  position: relative;
+  height: 20rem;
+}
+
+.fondo {
+  width: 100%;
+  height: auto;
+  opacity: 0.12;
+}
+
+.container-banner-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  position: absolute;
+  width: 50%;
+  top: 0;
+  z-index: 3;
+}
+
+.container-banner-text {
+  display: flex;
+  gap: 1.3rem;
+}
+
+.container-banner-text div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+button {
+  width: 16rem;
+  border:none;
+  height: 2.75rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg, #D94D50 0%, #B73AE1 100%);
+  cursor: pointer;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+button:hover{
+  transition: all 0.2s ease;
+  width: 16.1rem;
+  height: 2.8rem;
+}
